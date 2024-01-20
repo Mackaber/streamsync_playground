@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "streamsync_version": "0.2.8"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "parentId": null,
+            "position": 0,
+            "handlers": {
+                "ss-hashchange": "handle_hashchange"
+            },
+            "visible": true
+        },
+        "cxdbawjflm3z1oxk": {
+            "id": "cxdbawjflm3z1oxk",
+            "type": "page",
+            "content": {
+                "key": ""
+            },
+            "parentId": "root",
+            "position": 0,
+            "handlers": {
+                "ss-page-open": "check_session"
+            },
+            "visible": true
+        },
+        "wf0vmsrip2dyeshi": {
+            "id": "wf0vmsrip2dyeshi",
+            "type": "button",
+            "content": {
+                "text": "Login to Spotify"
+            },
+            "parentId": "cxdbawjflm3z1oxk",
+            "position": 0,
+            "handlers": {
+                "ss-click": "login_to_spotify"
+            },
+            "visible": "show_login"
+        },
+        "wdpynirrhkoe82dc": {
+            "id": "wdpynirrhkoe82dc",
+            "type": "text",
+            "content": {
+                "text": "Logged In as: @{username}"
+            },
+            "parentId": "cxdbawjflm3z1oxk",
+            "position": 1,
+            "handlers": {},
+            "visible": "show_user"
+        },
+        "6fycp8mlqhcec9l8": {
+            "id": "6fycp8mlqhcec9l8",
+            "type": "dataframe",
+            "content": {
+                "dataframe": "@{playlists}",
+                "enableDownload": "yes",
+                "enableSearch": "yes",
+                "wrapText": "yes"
+            },
+            "parentId": "cxdbawjflm3z1oxk",
+            "position": 3,
+            "handlers": {},
+            "visible": true
+        },
+        "d5sf30p0t9f6e24y": {
+            "id": "d5sf30p0t9f6e24y",
+            "type": "button",
+            "content": {
+                "text": "Get Playlists"
+            },
+            "parentId": "cxdbawjflm3z1oxk",
+            "position": 4,
+            "handlers": {
+                "ss-click": "get_playlists"
+            },
+            "visible": true
+        },
+        "5i1yupx3bfs4hofe": {
+            "id": "5i1yupx3bfs4hofe",
+            "type": "button",
+            "content": {
+                "text": "Print session"
+            },
+            "parentId": "cxdbawjflm3z1oxk",
+            "position": 2,
+            "handlers": {
+                "ss-click": "session_inspector"
+            },
+            "visible": true
+        }
+    }
+}
